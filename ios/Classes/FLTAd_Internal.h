@@ -152,7 +152,8 @@
                                   request:(FLTAdRequest *_Nullable)request
                                   gamRequest:(FLTGAMAdRequest *_Nullable)request
                         orientation: (UIInterfaceOrientation)orientation
-                       rootViewController:(UIViewController *_Nonnull)rootViewController;
+                       rootViewController:(UIViewController *_Nonnull)rootViewController
+                                     adId:(NSNumber *_Nonnull)adId;
 - (GADAppOpenAd *_Nullable)appOpenAd;
 - (NSString *_Nonnull)adUnitId;
 - (void)load;

@@ -251,9 +251,9 @@
                                                                   request:call.arguments[@"request"]
                                                                   gamRequest:nil
                                                                   orientation: adOrientation
-                                                       rootViewController:rootController];
-
-      [_manager loadAd:ad adId:call.arguments[@"adId"]];
+                                                       rootViewController:rootController
+                                                           adId:call.arguments[@"adId"]];
+      [_manager loadAd:ad];
       result(nil);
     } else if ([call.method isEqualToString:@"loadAdManagerAppOpenAd"]) {
         NSNumber *orientationFromArguments = call.arguments[@"orientation"];
@@ -272,9 +272,9 @@
                                                                     request:nil
                                                                     gamRequest:call.arguments[@"request"]
                                                                     orientation: adOrientation
-                                                         rootViewController:rootController];
-
-        [_manager loadAd:ad adId:call.arguments[@"adId"]];
+                                                         rootViewController:rootController
+                                                             adId:call.arguments[@"adId"]];
+        [_manager loadAd:ad];
         result(nil);
       } else if ([call.method isEqualToString:@"loadAdManagerInterstitialAd"]) {
     FLTGAMInterstitialAd *ad =
